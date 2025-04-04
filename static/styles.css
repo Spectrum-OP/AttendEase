@@ -1,0 +1,428 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-size: cover;
+  font-family: sans-serif;
+  margin-top: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-radius: 20px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 86%;
+  margin: auto;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* form  */
+.input {
+  font-family: "SF Pro";
+  max-width: 250px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1.5px solid #000;
+  border-radius: 0.5rem;
+  box-shadow: 2.5px 3px 0 #000;
+  outline: none;
+  transition: ease 0.25s;
+}
+
+.input:focus {
+  box-shadow: 5.5px 7px 0 black;
+}
+
+/* button */
+
+.button {
+  --main-color: rgb(46, 213, 115);
+  --main-bg-color: rgba(46, 213, 116, 0.36);
+  --pattern-color: rgba(46, 213, 116, 0.073);
+
+  /* change this rotation value */
+  filter: hue-rotate(45deg);
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+  background: radial-gradient(circle,
+      var(--main-bg-color) 0%,
+      rgba(0, 0, 0, 0) 95%),
+    linear-gradient(var(--pattern-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size: cover, 15px 15px, 15px 15px;
+  background-position: center center, center center, center center;
+  border-image: radial-gradient(circle,
+      var(--main-color) 0%,
+      rgba(0, 0, 0, 0) 100%) 1;
+  border-width: 1px 0 1px 0;
+  color: var(--main-color);
+  margin-top: 10px;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-size: cover, 10px 10px, 10px 10px;
+}
+
+.button:active {
+  filter: hue-rotate(250deg);
+}
+
+/* Button 2 */
+
+
+/* From Uiverse.io by faizanullah1999 */
+.primary-border {
+  font-family: "Ropa Sans", sans-serif;
+  /* font-family: 'Valorant', sans-serif; */
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: 1px solid #0e1822;
+  padding: 0.8rem 2.1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-color: #0e1822;
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  transition-property: background-position, border, color;
+  position: relative;
+  z-index: 1;
+}
+
+.primary-border:hover {
+  border: 1px solid #ff4655;
+  color: whitesmoke;
+  background-position: 40%;
+}
+
+.primary-border:before {
+  content: "";
+  position: absolute;
+  background-color: #0e1822;
+  width: 0.2rem;
+  height: 0.2rem;
+  top: -1px;
+  left: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.primary-border:hover:before {
+  background-color: white;
+}
+
+.primary-border:hover:after {
+  background-color: white;
+}
+
+.primary-border:after {
+  content: "";
+  position: absolute;
+  background-color: #ff4655;
+  width: 0.3rem;
+  height: 0.3rem;
+  bottom: -1px;
+  right: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.borders {
+  position: relative;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: inherit;
+  height: fit-content;
+}
+
+.borders:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  top: -0.3em;
+  border: 1px solid #0e1822;
+  border-bottom: 0px;
+  /* opacity: 0.3; */
+}
+
+.borders:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  bottom: -0.3em;
+  border: 1px solid #0e1822;
+  border-top: 0px;
+  /* opacity: 0.3; */
+  z-index: 0;
+}
+
+.shape {
+  fill: #0e1822;
+}
+
+/* Background blur */
+
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/static/bg2.jpg');
+  background-size: cover;
+  filter: blur(5px);
+  /* Adjust the blur radius as needed */
+  z-index: -1;
+  /* Place it behind other content */
+}
+
+
+/* Contact Me */
+
+.contact-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: inherit;
+  background-color: #e63946;
+  color: white;
+  text-align: center;
+  border-top: 4px solid #252529;
+  padding: 5px;
+  border-bottom: 4px solid #252529;
+  padding: 4px;
+}
+
+.contact-footer h3 {
+  margin-bottom: 10px;
+}
+
+.contact-footer p {
+  margin: 5px 0;
+}
+
+.contact-footer .social-media a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.contact-footer .social-media a:hover {
+  text-decoration: underline;
+}
+
+
+/* Contact Me Card */
+ul {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 20px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"]~.tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+  background: linear-gradient(45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f);
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"]~.tooltip {
+  background-color: #ff0000;
+}
+
+.footer-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.contact {
+  color: wheat;
+  font-size: 15px;
+  font
+}
+
+
+/* Custom Table Styling */
+.table-dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent black background */
+  border-radius: 10px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Ensures content doesn't overflow rounded corners */
+  border-collapse: separate;
+  /* Ensures rounded corners work properly */
+  border-spacing: 0;
+  /* Removes spacing between cells */
+  width: 100%;
+  /* Ensures the table takes full width */
+  margin-bottom: 1rem;
+  /* Adds spacing below the table */
+  color: #fff;
+  /* White text color for better contrast */
+}
+
+.table-dark th,
+.table-dark td {
+  padding: 12px 15px;
+  /* Adds padding to table cells */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Light border for separation */
+}
+
+.table-dark thead th {
+  background-color: rgb(216, 13, 77);
+  /* Red header background */
+  color: white;
+  /* White text for headers */
+  font-weight: bold;
+  /* Bold text for headers */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  /* Thicker border for header */
+}
+
+.table-dark tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Light hover effect */
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+}
+
+.table-dark tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+  /* Alternate row color */
+}
+
+.table-dark tbody tr td {
+  vertical-align: middle;
+  /* Aligns content vertically in the middle */
+}
+
+/* Optional: Add a subtle shadow to the table */
+.table-dark {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Hover */
+.col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
